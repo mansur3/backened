@@ -21,31 +21,31 @@ router.get("", async(req, res) => {
 })
 
 router.get("/city/:city/skill/:skill", async(req, res) => {
-    const item = await Job.findById({city: req.params.city, skill: req.params.skill}).lean().exec();
+    const item = await Job.find({city: req.params.city, skill: req.params.skill}).lean().exec();
 
     res.status(200).send({item});
 })
 
 router.get("/type/:check", async(req, res) => {
-    const item = await Job.findById({type : req.params.check}).lean().exec();
+    const item = await Job.find({type : req.params.check}).lean().exec();
 
     res.status(200).send({item});
 })
 
 router.get("/period/:month", async(req, res) => {
-    const item = await Job.findById({period: req.parms.month}).lean().exec();
+    const item = await Job.find({period: req.parms.month}).lean().exec();
 
     res.status(200).send({item});
 })
 
 router.get("/rating/:rate", async(req, res) => {
-    const item = await Job.findById({rating : req.params.rate}).sort(asc).lean().exec();
+    const item = await Job.find({rating : req.params.rate}).sort(asc).lean().exec();
 
     res.status(200).send({item});
 })
 
 router.get("/status/:open", async (req, res) => {
-    const item = await Job.findById({status: req.params.open}).lean().exec();
+    const item = await Job.find({status: req.params.open}).lean().exec();
 
     res.status(200).send({item});
 })
