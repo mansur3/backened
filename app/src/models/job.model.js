@@ -4,14 +4,16 @@ const app = express();
 const mongoose = require("mongoose");
 
 
-// const Company = require("./models/company.model");
+
+const Company = require("./company.model");
 // const Job = require("./models/job.model");
-const City = require("./models/city.model");
-const Period = require("./models/period.model");
-const Rating = require("./models/rating.model");
-const Status = require("./models/status.model");
-const Type = require("./models/type.model");
-const Skill = require("./models/skill.model");
+const City = require("./city.model");
+const Period = require("./period.model");
+const Rating = require("./rating.model");
+const Status = require("./status.model");
+const Type = require("./type.model");
+const Skill = require("./skill.model");
+
 
 
 const jobSchema = new mongoose.Schema({
